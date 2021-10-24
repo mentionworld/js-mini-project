@@ -1,0 +1,39 @@
+    .container-1,
+    .container-2,
+    .container-3,
+    .container-4 {
+        border: 1px solid #000;
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .flex-box-container-1,
+    .flex-box-container-2,
+    .flex-box-rps,
+    .flex-box-pick-color {
+        display: flex;
+        border: 1px solid #000;
+        padding: 10px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .flex-box-container-1 div {
+        display: flex;
+        padding: 10px;
+        border: 1px solid #000;
+        text-align: center;
+    }
+    
+    .flex-box-container-2 img {
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.7);
+    }
+    
+    .flex-box-rps img:hover {
+        box-shadow: 0 10px 50px rgba(0, 0, 255, 1);
+    }

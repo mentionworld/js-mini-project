@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Js practice
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-1">
+        <h2>Your Age in Days</h2>
+        <div class="flex-box-container-1">
+            <div>
+                <button class="btn btn-primary" onclick="ageinDays()">
+                    click
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-danger" onclick="reset()">
+                    reset
+                </button>
+            </div>
+        </div>
+        <div class="flex-box-container-1">
+            <div id="flex-box-result">
+
+            </div>
+        </div>
+    </div>
+    <div class="container-2">
+        <h2>Cat Generator</h2>
+        <button class="btn btn-success" id="cat-generate" onclick="generate()">
+                    Generator Cat
+                </button>
+
+        <div class="flex-box-container-2" id="flex-cat-geneate">
+        </div>
+    </div>
+
+
+    <div class="container-3">
+        <h2>Rock ,Paper ,Scissors</h2>
+        <div class="flex-box-rps" id="flex-box-rps">
+            <img id="rock" onclick="rpsGame(this)" src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2Fdv424076%2FBoulder--Namibia--Africa%2F960x0.jpg%3Ffit%3Dscale" alt="" width="150px" height="150px">
+            <img id="paper" onclick="rpsGame(this)" src="https://rollandinc-production.s3.ca-central-1.amazonaws.com/app/uploads/2019/07/22145855/paper-digital-white.jpg" alt="" width="150px" height="150px">
+            <img id="scissors" onclick="rpsGame(this)" src="data:image/jpeg;base64,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"
+                alt="" width="150px" height="150px">
+        </div>
+    </div>
+
+
+    <div class="container-4">
+        <h2 id="change-by-color">Change the Color of All Buttons</h2>
+        <div class="flex-box-pick-color">
+            <form action="">
+                <select name="backdrop" id="background" onchange="buttonColorChange(this)">
+                    <option value="random">Random</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="reset">Reset</option>
+                </select>
+            </form>
+            <button class="btn btn-primary">
+                We 
+            </button>
+            <button class="btn btn-danger">
+            Are
+            </button>
+            <button class="btn btn-warning">
+                JavaScript
+            </button>
+            <button class="btn btn-success">
+            Programmer !
+            </button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
